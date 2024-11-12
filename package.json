@@ -4,6 +4,7 @@
 	"type": "module",
 	"version": "1.0.0",
 	"scripts": {
+		"preinstall": "npx only-allow pnpm",
 		"dev": "rsbuild dev --env-dir ./env",
 		"build": "rsbuild build --env-dir ./env",
 		"preview": "rsbuild preview --env-dir ./env",
