@@ -2,7 +2,7 @@
 
 ## 项目简介
 
-Ell Code 是一个基于 ShadcnUI 集成开发环境模板。
+Ell Code 是一个基于 ShadcnUI 的 IDE 模板。
 
 ![preview](preview.png)
 
