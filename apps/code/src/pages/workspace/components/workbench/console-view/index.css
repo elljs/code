@@ -1,0 +1,6 @@
+.terminal {
+    @apply bg-secondary p-2 no-scrollbar;
+    .xterm-viewport {
+        @apply !bg-zinc-800 !text-secondary-foreground no-scrollbar;
+    }
+}

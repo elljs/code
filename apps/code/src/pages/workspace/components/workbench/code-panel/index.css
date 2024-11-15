@@ -1,0 +1,6 @@
+.ell-code-block {
+	background: red;
+}
+.ell-focus-line {
+	@apply bg-secondary/20;
+}
