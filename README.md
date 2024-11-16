@@ -2,7 +2,7 @@
 
 ## 项目简介
 
-Ell Code 是一个代码编辑器模板。
+Ell Code 是一个仿照 VS Code 的代码编辑器模板。
 
 ![preview](preview.png)
 
