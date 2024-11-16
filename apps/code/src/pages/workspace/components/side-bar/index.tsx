@@ -54,13 +54,13 @@ export default function MenuBar({ active, onActiveChange }: MenuBarProps) {
                     onClick={() => onActiveChange?.("copilot")}
                     icon={<Bot className="size-6" />}
                 />
-                <MenuItem
+                {/* <MenuItem
                     id="git"
                     title="事件"
                     isActive={active === "git"}
                     onClick={() => onActiveChange?.("git")}
                     icon={<GitMerge className="size-6" />}
-                />
+                /> */}
             </div>
             <div className="flex flex-col justify-end flex-1">
                 <MenuItem id="setting" onClick={() => { }} icon={<Settings className="size-6" />} title="设置" />

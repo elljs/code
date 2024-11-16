@@ -1,9 +1,26 @@
-import { Gitgraph } from "@gitgraph/react";
+import { Gitgraph, templateExtend, TemplateName } from "@gitgraph/react";
+import "./index.css";
+
+const template = templateExtend(TemplateName.Metro, {
+    commit: {
+        color: 'red'
+    },
+    tag: {
+        color: 'black',
+        strokeColor: '#ce9b00',
+        bgColor: '#ffce52',
+        font: 'italic 12pt serif',
+        borderRadius: 0,
+        pointerWidth: 6,
+    },
+});
 
 export default function GitFlow() {
     return (
-        <div className="h-full w-full">
-            <Gitgraph>
+        <div className="git-flow">
+            <Gitgraph options={{
+                template
+            }}>
                 {(gitgraph) => {
                     // Simulate git commands with Gitgraph API.
                     const master = gitgraph.branch("master");
@@ -14,9 +31,12 @@ export default function GitFlow() {
 
                     const aFeature = develop.branch("a-feature");
                     aFeature
-                        .commit("Make it work")
-                        .commit("Make it right")
-                        .commit("Make it fast");
+                        .commit('one')
+                        .tag('v1')
+                        .commit('two')
+                        .tag('v2')
+                        .tag('important')
+                        .commit('three');
 
                     develop.merge(aFeature);
                     develop.commit("Prepare v1");

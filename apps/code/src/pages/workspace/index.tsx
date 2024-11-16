@@ -6,7 +6,7 @@ import Workbench from "./components/workbench";
 
 export default function Workspace() {
     const state = useReactive<{ active: string }>({
-        active: 'git'
+        active: 'file'
     });
 
     return (
