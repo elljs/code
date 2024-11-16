@@ -6,9 +6,11 @@ import {
 import React from 'react';
 import ConsoleView from '../console-view';
 import TabView from '../tab-view';
+import TradingView from '../trading-view';
 
 const components = {
     TabView,
+    TradingView,
     ConsoleView
 };
 
@@ -45,16 +47,21 @@ export default function MainView() {
         });
         tabView.group.header.hidden = true;
 
+        // const tradingView = event.api.addPanel({
+        //     id: 'trading-view',
+        //     component: 'TradingView',
+        // }); 
+        // tradingView.group.header.hidden = true;
+
         const consoleView = event.api.addPanel({
             id: 'console-view',
             component: 'ConsoleView',
-            // minimumHeight: 0,
+            minimumHeight: 0,
             position: {
                 direction: 'below'
             }
         });
         consoleView.group.header.hidden = true;
-        consoleView.group.api.setSize({ height: 0 })
     };
 
     return (

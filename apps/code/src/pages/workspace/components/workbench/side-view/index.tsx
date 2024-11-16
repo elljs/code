@@ -7,7 +7,7 @@ import {
 import { cn } from '@/lib/utils';
 import Copilot from '../../copilot';
 import Event from '../../event';
-import Workflow from '../../workflow';
+import GitFlow from '../../git-flow';
 import PaneView from '../pane-view';
 
 interface PanelProps extends React.PropsWithChildren {
@@ -61,6 +61,9 @@ export default function SideView({ params }: ISplitviewPanelProps<{ active: stri
             </Panel>
             <Panel visbile={'event' === params.active}>
                 <Event />
+            </Panel>
+            <Panel visbile={'git' === params.active}>
+                <GitFlow />
             </Panel>
         </div>
     );

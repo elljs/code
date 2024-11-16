@@ -6,6 +6,7 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from "@/components/ui/resizable";
 import { Switch } from "@/components/ui/switch";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import dockerEvent from "@/events/docker-event";
 import { cn } from "@/lib/utils";
 import Editor, { Monaco } from '@monaco-editor/react';
 import { useReactive } from "ahooks";
@@ -15,12 +16,11 @@ import * as MonacoEditor from 'monaco-editor';
 import { createOllama, } from 'ollama-ai-provider';
 import { useEffect, useRef } from "react";
 import ReactDOM from "react-dom/client";
-import Code from "./code";
+import CodeEditor from "../../code-editor";
 import { Container } from "./container";
 import Flow from "./flow";
 import "./index.css";
 import ThemeOneDarkPro from './themes/onedarkpro.json';
-import dockerEvent from "@/events/docker-event";
 
 const language = 'ell';
 
@@ -413,7 +413,7 @@ export default function CodePanel(_: ISplitviewPanelProps) {
                         <ResizableHandle />
                         <ResizablePanel defaultSize={35} minSize={20} maxSize={80}>
                             {source && (
-                                <Code
+                                <CodeEditor
                                     language='typescript'
                                     value={source}
                                     options={{

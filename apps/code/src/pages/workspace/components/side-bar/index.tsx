@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { Bot, Files, GitMerge, Network, Search, Settings, Workflow } from "lucide-react";
+import { Bot, Files, GitMerge, Search, Settings } from "lucide-react";
 import { ReactNode } from "react";
 
 interface MenuItemProps {
@@ -55,10 +55,10 @@ export default function MenuBar({ active, onActiveChange }: MenuBarProps) {
                     icon={<Bot className="size-6" />}
                 />
                 <MenuItem
-                    id="event"
+                    id="git"
                     title="事件"
-                    isActive={active === "event"}
-                    onClick={() => onActiveChange?.("event")}
+                    isActive={active === "git"}
+                    onClick={() => onActiveChange?.("git")}
                     icon={<GitMerge className="size-6" />}
                 />
             </div>

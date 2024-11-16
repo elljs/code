@@ -94,7 +94,8 @@ export default function Copilot() {
                             })} />
                     </div>
                     <ChatBubbleMessage variant='sent'>
-                        <span className="text-sky-500">@楚留香</span> 实现一个程序，每天定时搜集财经热点以及马斯克在X上的动态，整理并推送到我的微信，需要哪些步骤？
+                        {/* <span className="text-sky-500">@楚留香</span> 实现一个程序，每天定时搜集财经热点以及马斯克在X上的动态，整理并推送到我的微信，需要哪些步骤？*/}
+                        <span className="text-sky-500">@楚留香</span> 帮我实现通过微信消息调整量化策略参数
                     </ChatBubbleMessage>
                 </ChatBubble>
                 {(state.isLoading || state.message) && <ChatBubble variant='received'>
